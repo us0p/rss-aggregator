@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  pg:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=rssagg
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=rssagg1234
